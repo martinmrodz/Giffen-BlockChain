@@ -15,13 +15,13 @@ public class P2PMessageQueue {
 
         if(head == null)
         {
-            oMessage = head;
-            oMessage = tail;
+            head = oMessage;
+            tail = oMessage;
         }
         else
         {
-            oMessage = tail.next;
-            oMessage = tail;
+            tail.next = oMessage;
+            tail = oMessage;
         }
     }
 
